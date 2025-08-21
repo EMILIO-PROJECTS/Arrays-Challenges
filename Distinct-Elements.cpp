@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    system("cls");
+
+    int size;
+    cin >> size;
+    int distinct = 1;
+
+    int array[100];
+    for (int i = 0; i < size; ++i) {
+        cin >> array[i];
+    }
+
+    for(int i = 1; i < size; i++) {
+        if (array[i] != array[i - 1]) {
+            distinct++;
+        }
+    }
+
+    cout << "Distinct Elements: "<< distinct << endl;
+
+}
